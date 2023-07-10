@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>CRUD</title>
+</head>
+<body>
+    
+    <section class="crud">
+        <div class="container">
+            <h1>Crud Operation</h1>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <form action="">
+                        <h2>Product Form</h2>
+                        <input type="text" name="product_name" id="productname" placeholder="Product Name">
+                        <input type="text" name="product_category" id="productcategory" placeholder="Product Category">
+                        <input type="number" name="product_price" id="productprice" placeholder="Product Price">
+                        <input type="number" name="product_count" id="productcount" placeholder="Product Count">
+                        <input type="text" name="product_description" id="productdescription" placeholder="Product Description">
+                        <input type="text" name="product_description" onkeyup="Search(this.value)" id="inputSearch" placeholder="Search in product">
+
+                        <div class="vali error" id="red_error">
+                            Please Enter The Valid Data!
+                        </div>
+                        <div class="vali error" id="count_error">
+                            Count must be greater than 1
+                        </div>
+                        <div class="vali succes" id="success">
+                            Successfully Added!!
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <button type="button" class="btn btn-info" id="add">Add Product</button>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-primary" onclick="searchMood(this.id)" id="searchname">Search name</button>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-secondary" onclick="searchMood(this.id)" id="searchcategry">Search Cg</button>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-danger" id="delete">Delete All </button>
+
+                            </div>
+
+
+                        </form>
+
+                        </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <h2>Product Table</h2>
+                    <div class="row">
+                        <table>
+                            <thead>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Prise</th>
+                                <th>Description</th>
+                                <th>Delete</th>
+                                <th>Edit</th>
+                            </thead>
+                            <tbody id="createproduct">
+
+                            </tbody>
+                        </table>
+                    </div>
+            
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
