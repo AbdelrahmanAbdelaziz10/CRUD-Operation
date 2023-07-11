@@ -43,7 +43,7 @@ function AddProduct(){
         redError.style.display="none";
 
         if(mood==="create"){
-            if(product.count>1 || product.count === ""){
+            if(product.count>0 ){
                 for(let i=1 ;i<=product.count;i++){
                     arProduct.push(product);
                     countError.style.display="none";
@@ -80,6 +80,7 @@ function AddProduct(){
 
 //======== Read Product ==========//
 function readProduct(){
+    createProduct.innerHTML = "";
     for(let i=0 ; i<arProduct.length ; i++){
         // let total = arProduct[i].price*arProduct[i].count;
         createProduct.innerHTML+= `
