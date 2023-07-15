@@ -135,6 +135,7 @@ function clearData(){
 function deleteAllData(){
     localStorage.clear();
     arProduct.splice(0);
+    readProduct();
     AddProduct();
 }
 
@@ -157,6 +158,7 @@ function searchMood(id){
 
 function Search(value){
     if(moodSearch === "name"){
+        createProduct.innerHTML = "";
         for(let i=0 ; i<arProduct.length; i++){
             if(arProduct[i].name.includes(value)){
                 createProduct.innerHTML+= `
@@ -174,6 +176,7 @@ function Search(value){
             }
         }
     }else{
+        createProduct.innerHTML = "";
         for(let i=0 ; i<arProduct.length; i++){
             if(arProduct[i].category.includes(value)){
                 createProduct.innerHTML+= `
